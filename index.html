@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        section{
+            padding: 50px 0;
+            box-sizing: border-box;
+            height: 100vh;
+            justify-content: center;
+            font-size: 30px;
+            display: flex;
+            align-items: center;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        #intro{
+            background-color: #2ecc71;
+        }
+        #secao2{
+            background-color: #3498db;
+        }
+        #secao3{
+            background-color: #8e44ad;
+        }
+        footer{
+            display: flex;
+            justify-content: flex-end;
+            padding: 30px;
+            background-color: #95a5a6;
+        }
+        #scrollTopButton{
+            background-color: #000000;
+            border: none;
+            border-radius: 50%;
+            color: #ffffff;
+            cursor: pointer;
+            font-size: 20px;
+            width: 50px;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <section id="intro">
+        <h1>Role para baixo 👇</h1>
+    </section>
+    <section id="secao2">
+        <h2>Continue rolando a página 👇</h2>
+    </section>
+    <section id="secao3">
+        <h2>Mais um pouquinho 👇</h2>
+    </section>
+    <footer>
+        <button id="scrollTopButton">☝️</button>
+    </footer>
+    <script>
+        var scrollTotoButton = document.getElementById("scrollTopButton");
+        var docElement = document.documentElement;
+
+        function scrolltoTop(){
+            docElement.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        }
+
+        scrollTotoButton.addEventListener("click", scrolltoTop);
+    </script>
+</body>
+</html>
